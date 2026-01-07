@@ -50,7 +50,7 @@ let arr = [
     artist: "Bruno Mars",
     songPoster: "img/die with smile.jpg",
     artistPoster: "img/bruno mars.jpeg",
-    url: "audio/Die_With_A_Smile.mp3",
+    url: "audio/Die With A Smile-(SambalpuriStar.In).mp3",
   },
 ];
 
@@ -59,7 +59,10 @@ let songDiv  = document.querySelector("#song-div");
 let clutter = "";
 let audio = new Audio();
 
-let mid  = document.querySelector("#mid-1");
+let mid1  = document.querySelector("#mid-1");
+let mid2  = document.querySelector("#mid-2");
+let playbar1  = document.querySelector("#playbar-1");
+let playbar3  = document.querySelector("#playbar-3");
 
 arr.forEach((elem,idx)=>{
     clutter += `  <div id=${idx} class="song">
@@ -77,11 +80,14 @@ arr.forEach((elem,idx)=>{
                 </div>`;
 })
 songDiv.innerHTML = clutter;
-
+let putter = ""; 
+let shooter = "";
 let shutter = "";
 songDiv.addEventListener("click",(e)=>{
    audio.src = arr[e.target.id].url;
    audio.play();
+   mid1.style.height = "50%";
+   mid2.style.height = "50%";
 shutter = ` <div id="overlay">
                  <div id="nav">
                     <i class="ri-arrow-left-wide-line"></i><i class="ri-arrow-right-wide-line"></i>
@@ -96,5 +102,18 @@ shutter = ` <div id="overlay">
                </div>
                 <img class = "artist-poster" src="${arr[e.target.id].artistPoster}" alt="">
                 `;
-                mid.innerHTML = shutter;
+                mid1.innerHTML = shutter;
+putter = `  <div id="poster"><img src="${arr[e.target.id].songPoster}" alt=""></div>
+            <div id="song-details">
+                <h2 id="song-name">${arr[e.target.id].songName}</h2>
+                <h3 id="artist-name">${arr[e.target.id].artist}</h3>`;
+
+               playbar1.innerHTML = putter; 
+
+               shooter = `   
+             <i class="ri-share-line"></i>
+            <i class="ri-volume-up-fill"></i>
+            <i class="ri-alarm-snooze-line"></i>`;
+               playbar3.innerHTML = shooter;
 });
+
