@@ -1,0 +1,394 @@
+/* ===== FONT IMPORTS (ALWAYS ON TOP) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== ROOT / DEFAULT FONT ===== */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif; /* default UI font */
+}
+
+/* ===== LAYOUT ===== */
+#main {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(237, 237, 237);
+}
+
+
+#page{
+    height: 90vh;
+    width: 100%;
+    background-color: #0F1216;
+    display: flex;
+}
+#left-sidebar{
+    width: 20%;
+    height: 100%;
+    background-color: #1b1e23;
+    padding-left: 1vw;
+}
+#left-1{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellow; */
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-left: 1.5vw;
+    gap: 1vw;
+    border-bottom: 1px solid #5b5e6111;
+}
+
+
+#left-1 h1{
+    font-size: 1.11em;
+    color: #ffffffe3;
+    font-weight: 400;
+
+    width: 100%;
+}
+#left-1 h1:hover{
+    background-color: rgba(74, 68, 68, 0.089);
+    cursor: pointer;
+    border-left: 3px solid #d94911e1;
+}   
+h1 i {
+  margin-right: 10px; /* gap adjust kar sakte ho */
+    font-size: 1.1em;
+}
+
+#left-2{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellow; */
+    
+    padding-top: 1.5vw;
+    padding-left: 1.5vw;
+    gap: 1vw;
+    border-bottom: 1px solid #5b5e6111;
+}
+#left-2 h2{
+    font-size: 1.1em;
+    color: #B3B3B3;
+    font-weight: 400;
+}
+#left-2 h1{
+    font-size: 1.2em;
+    color: #ffffffe5;
+    font-weight: 400;
+}
+#left-2 h1:hover{
+    background-color: rgba(74, 68, 68, 0.089);
+    cursor: pointer;
+    border-left: 3px solid #d94911e1;
+} 
+#left-3{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellow; */
+    
+    padding-top: 1.5vw;
+    padding-left: 1.5vw;
+    gap: 1vw;
+    border-bottom: 1px solid #5b5e6111;
+}
+#left-3 h2{
+    font-size: 1.1em;
+    color: #B3B3B3;
+    font-weight: 400;
+}
+#left-3 h1{
+    font-size: 1.2em;
+    color: #ffffffe5;
+    font-weight: 400;
+}
+#left-3 h1:hover{
+    background-color: rgba(74, 68, 68, 0.089);
+    cursor: pointer;
+    border-left: 3px solid #d94911e1;
+} 
+#mid-sidebar{
+    width:55%;
+    height: 100%;
+    /* background-color: rgb(128, 0, 94); */
+}
+#right-sidebar{
+    width:25%;
+    height: 100%;
+    background-color: rgb(128, 0, 94);
+}
+#playbar{
+    width: 100%;
+    height: 10vh;
+    background-color: #101317;
+}
+
+#mid-1{
+    width: 100%;
+    height: 50%;
+    /* background-color:yellow; */
+    position: relative;
+}
+.artist-poster{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+}
+#overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav{
+   
+    /* background-color: red; */
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    gap: 1vw;
+}
+#nav i{
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+input{
+    width: 30%;
+    background-color: #ffffff;
+    height: 40px;
+    border-radius: 28px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    outline: none;   /* ⭐ MOST IMPORTANT */
+      border: none;
+    outline: none;
+    box-shadow: none;          /* ⭐ inner black ring remove */
+    appearance: none;          /* ⭐ browser default style remove */
+    -webkit-appearance: none; /* ⭐ Chrome / Safari */
+}
+input::placeholder {
+  color: black;
+  font-size: 14px;
+}
+input:focus {
+    border: none;
+    outline: none;
+}
+
+#profile{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-left: 20vw;
+    
+    cursor: pointer;
+    display: flex;
+}
+#profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+#profile h3{
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: 0.5vw;
+    align-self: center;
+}
+
+#hero{
+    width: 100%;
+    height: 80%;
+    background-color: rgba(0, 0, 255, 0);   
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+#hero h1{
+    color: white;
+    font-size: 4.5em;
+    mix-blend-mode: difference;
+    font-weight: 1200;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    font-family: 'Montserrat', sans-serif;
+}
+#btn1{
+    width: 16%;
+    height: 5vh;
+    background-color: #d94911e1;
+    border: none;
+    border-radius: 28px;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    margin-left: 1vw;
+    font-weight: 400;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+#btn2{
+    width: 16%;
+    height: 5vh;
+    background-color: #1db95400;
+    border: none;
+    border-radius: 28px;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+#right-sidebar{
+    width: 25%;
+    height: 100%;
+    background-color: #1b1e23;
+    padding-left: 1vw;
+}
+
+#mid-2{
+    width: 100%;
+    height: 50%;
+    background-color: #232730;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5vw;
+    padding-top: 1vh;
+}
+#mid-2 h1{
+    font-size: 2em;
+    color: #ffffffe5;
+    font-weight: 900;
+    font-family: montserrat, sans-serif;
+}
+#song-div{
+    width: 100%;
+    height: 90%;
+    margin-top: 1vh;
+   
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+#song-div::-webkit-scrollbar {
+  width: 4px;      /* normal thin */
+}
+
+#song-div::-webkit-scrollbar-thumb {
+  background: #aaaaaa42;   /* normal grey */
+  border-radius: 4px;
+}
+
+#song-div::-webkit-scrollbar-track {
+  background: transparent;
+}
+.song{
+    width: 97%;
+    height: 25%;
+    gap: 1vw; 
+    display: flex;
+}
+.song:hover{
+    background-color: rgba(74, 68, 68, 0.089);
+    cursor: pointer;
+    border-left: 5px solid #d94911e1;
+} 
+#song-poster{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+        pointer-events: none;
+
+}
+.song img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    margin-right: 1vw;
+}
+
+#title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 40%;
+    padding-left: 1vw;
+     pointer-events: none;
+
+   
+}
+.song h4{
+    font-size: 1em;   
+    color: white;
+    font-weight: 500;   
+}
+.song p{
+    font-size: 0.8em;   
+    color: white;
+    font-weight: 500;   
+}
+
+#liked{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+    gap: 10px;
+    margin-left: auto;
+        pointer-events: none;
+
+}
+#liked i{
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#liked h2{
+    font-size: 1em;  
+    color: white;
+    font-weight: 400;
+}
+
+#playbar{
+    width: 100%;
+    height: 10vh;
+    background-color: #2A2C34;
+}
