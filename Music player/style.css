@@ -467,3 +467,85 @@ input:focus {
     font-size: 1.5em;
     cursor: pointer;
 }
+
+
+
+#right-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ⭐ FIX */
+  padding: 1vw;
+  color: white;
+}
+.rs-head {
+  font-size: 0.85em;
+  color: #b3b3b3;
+  margin-bottom: 0.6vh;
+}
+
+.queue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vh;
+}
+
+.queue-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7vw;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.queue-item:hover {
+  opacity: 1;
+}
+
+.queue-item img {
+  width: 34px;
+  height: 34px;
+  border-radius: 4px;
+}
+
+.queue-item span {
+  font-size: 0.9em;
+}
+
+/* Artist bottom bar */
+.artist-footer {
+  border-top: 1px solid #ffffff1a;
+  padding-top: 1vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artist-left {
+  display: flex;
+  gap: 0.6vw;
+  align-items: center;
+}
+
+.artist-left img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.artist-left h4 {
+  font-size: 0.9em;
+}
+
+.artist-left p {
+  font-size: 0.75em;
+  color: #b3b3b3;
+}
+
+.artist-actions i {
+  font-size: 1.1em;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.artist-actions i:hover {
+  opacity: 1;
+}
