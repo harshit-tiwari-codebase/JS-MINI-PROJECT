@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right bottom,rgb(26,26,26),rgb(30,30,30),black);
+    padding: 40px;
+}
+section{
+    width: 400px;
+    height: 100%;
+    background-color: black;
+    margin: auto;
+    border-radius: 10px;
+}
+.all-reels{
+    width: 100%;
+    height: 100%;
+}
+.reel{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+.reel video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;
+}
+.bottom{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    padding: 1.2vw;
+    display: flex;
+    flex-direction: column;
+
+    /* 🎯 ONLY gradient – no color, no blur */
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0)
+    );
+}
+
+.user{
+    width: 100%;
+    height: 50%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+}
+.user h3{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+.user img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
