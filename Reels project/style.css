@@ -218,3 +218,103 @@ section::-webkit-scrollbar{
 .mute:active{
     scale:0.9;
 }
+/* =========================
+   MOBILE PERFECT REELS UI
+   ========================= */
+@media (max-width: 600px) {
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  /* Full screen phone layout */
+  section {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .all-reels {
+    height: 100%;
+  }
+
+  .reel {
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  /* 🎥 VIDEO FIX */
+  .reel video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* VERY IMPORTANT */
+    object-position: center;
+    border-radius: 0;
+  }
+
+  /* 🔊 MUTE BUTTON */
+  .mute {
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+  }
+
+  .mute i {
+    font-size: 15px;
+  }
+
+  /* ⬇️ BOTTOM INFO */
+  .bottom {
+    height: 28%;
+    padding: 14px;
+  }
+
+  .user {
+    gap: 10px;
+  }
+
+  .user img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .user h3 {
+    font-size: 14px;
+  }
+
+  .follow-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .discription h2 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* 👉 RIGHT ICON BAR */
+  .right {
+    top: 38%;
+    right: 8px;
+    width: 48px;
+    gap: 18px;
+    background: none;
+  }
+
+  .right h1 {
+    font-size: 22px;
+  }
+
+  .right h2 {
+    font-size: 13px;
+  }
+}

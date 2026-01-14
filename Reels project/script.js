@@ -86,6 +86,23 @@ const reelsData = [
     comments: 3200,
     shares: 2400,
   },
+  
+  
+  {
+    id: 7,
+    username: "pratyush.bhatt",
+    profileImg: "img/user6.jpg",
+    isFollowing: false,
+    isLiked: true,
+    isMute: true,
+    videoSrc: "videos/pratyush.mp4",
+    description:
+      "born to shine",
+    likes: 12,
+    comments: 32,
+    shares: 2,
+  }
+
 ];
 let section = document.querySelector("section")
 let allReels = document.querySelector(".all-reels");
