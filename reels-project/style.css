@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right bottom,rgb(26,26,26),rgb(30,30,30),black);
+    padding: 40px;
+   
+}
+section{
+    width: 400px;
+    height: 100%;
+    background-color: black;
+    margin: auto;
+    border-radius: 10px;
+
+    overflow-y: scroll;
+
+    /* 🔥 Scroll snapping */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+section::-webkit-scrollbar{
+    display: none;
+}
+.all-reels{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.reel{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-stop: always;
+    /* 🔥 snap point */
+    scroll-snap-align: start;
+}
+
+.reel video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;
+}
+.bottom{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    padding: 1.2vw;
+    display: flex;
+    flex-direction: column;
+
+    /* 🎯 ONLY gradient – no color, no blur */
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0)
+    );
+}
+
+.user{
+    width: 100%;
+    height: 50%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+}
+.user h3{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+.user img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* .user button{
+    padding: 0.5vw 0.8vw ;
+    border-radius: 28px;
+    border: 1px solid black;
+    background-color: #ffffffdb;
+    font-weight: 500;
+    font-size: 14px;
+} */
+.discription{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: red; */
+    width: 100%;
+    height: 50%;
+}
+.discription h2{
+    font-size: 16px;
+    color: #fff;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+       font-weight: 600;
+}
+.right{
+    width: 50px;
+    position: absolute;
+    right: 0;
+    /* background-color: green; */
+    display: flex;
+    top: 40%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+       background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.005),
+        rgba(0, 0, 0, 0.01),
+        rgba(0, 0, 0, 0.025),
+        rgba(0,0,0,0)
+    );
+  
+
+
+}
+.right h1{
+   font-size: 25px;
+   color: #fff;
+   font-weight: 500;
+   pointer-events: none;
+}
+.right h2{
+   font-size: 15px;
+   color: #fff;
+   pointer-events: none;
+}
+.right i{
+    cursor: pointer;
+}
+.like{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
+}
+.comment{
+    display: flex;
+    width: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.share{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
+}
+.more{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#liked{
+    color: red;
+}
+.follow-btn{
+    padding: 0.5vw 0.9vw;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+.mute{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    
+    top: 10px;
+    right: 10px;
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    cursor: pointer;
+}
+.mute i{
+    font-size: 15px;
+    color: #fff;
+    pointer-events: none;
+}
+.mute:active{
+    scale:0.9;
+}
+/* =========================
+   MOBILE PERFECT REELS UI
+   ========================= */
+@media (max-width: 600px) {
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  /* Full screen phone layout */
+  section {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .all-reels {
+    height: 100%;
+  }
+
+  .reel {
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  /* 🎥 VIDEO FIX */
+  .reel video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* VERY IMPORTANT */
+    object-position: center;
+    border-radius: 0;
+  }
+
+  /* 🔊 MUTE BUTTON */
+  .mute {
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+  }
+
+  .mute i {
+    font-size: 15px;
+  }
+
+  /* ⬇️ BOTTOM INFO */
+  .bottom {
+    height: 28%;
+    padding: 14px;
+  }
+
+  .user {
+    gap: 10px;
+  }
+
+  .user img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .user h3 {
+    font-size: 14px;
+  }
+
+  .follow-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .discription h2 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* 👉 RIGHT ICON BAR */
+  .right {
+    top: 38%;
+    right: 8px;
+    width: 48px;
+    gap: 18px;
+    background: none;
+  }
+
+  .right h1 {
+    font-size: 22px;
+  }
+
+  .right h2 {
+    font-size: 13px;
+  }
+}
