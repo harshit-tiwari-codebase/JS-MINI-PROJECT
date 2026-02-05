@@ -1,0 +1,264 @@
+
+:root{
+
+  /* Main Background */
+  --bg-main:#111111;
+
+  /* Cards */
+  --bg-card:#1a1a1a;
+
+  /* Borders */
+  --border:#2a2a2a;
+
+  /* Text */
+  --text-main:#f9fafb;
+  --text-muted:#9ca3af;
+
+  /* Navbar */
+  --nav-bg:#161616;
+
+  /* MODULE COLORS (same vibe, brighter for dark) */
+
+  --todo:#60a5fa;        /* Blue */
+  --planner:#4ade80;    /* Green */
+  --pomodoro:#f87171;   /* Red */
+  --weather:#7dd3fc;    /* Sky */
+  --goals:#c084fc;      /* Purple */
+
+  /* Accent */
+  --accent:#60a5fa;
+
+  /* Glow */
+  --accent-glow:rgba(96,165,250,.35);
+
+  /* Shadow */
+  --shadow:0 10px 25px rgba(0,0,0,.6);
+}
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:'Poppins',sans-serif;
+}
+
+html,body{
+ width:100%;
+ height:100%;
+
+}
+#main{
+ width:100%;
+ height:100%;
+ background:var(--bg-main);
+
+}
+
+
+
+/* NAVBAR */
+
+nav{
+ width:100%;
+ height:60px;
+ background:var(--nav-bg);
+ border-bottom:1px solid var(--border);
+
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ padding:0 40px;
+
+ position:sticky;
+ top:0;
+ z-index:999;
+
+ box-shadow:0 4px 15px rgba(0,0,0,.05);
+}
+
+/* MAIN GRID */
+
+.all-Elems{
+ width:100%;
+ height:calc(100% - 60px);
+ display:flex;
+ flex-wrap:wrap;
+ gap:20px;
+ padding:30px 40px;
+ position: absolute;
+ overflow-x: hidden;
+ overflow-y: auto;
+}
+.all-Elems::-webkit-scrollbar{
+    display: none;
+}
+/* CARDS */
+
+.elem{
+ width:270px;
+ height:400px;
+
+ background:var(--bg-card);
+ border-radius:20px;
+ border:1px solid var(--border);
+ position: relative;
+ box-shadow:var(--shadow);
+ transition:.3s ease;
+ overflow: hidden;
+}
+
+/* CARD HOVER */
+
+.elem:hover{
+ transform:translateY(-8px);
+ box-shadow:0 15px 40px var(--accent-glow);
+}
+
+
+
+/* IMAGE */
+
+.elem img{
+ width:100%;
+ height:100%;
+ object-fit:cover;
+}
+
+.elem button{
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    padding: 10px 20px;
+    transform:translateX(-50%);
+    border-radius: 28px;
+    color: black;
+    background-color: #fff;
+    border: 1px solid #111;
+    font-weight: 600;
+}
+.full{
+    width: 100%;
+    height: 90%;
+    padding: 40px;
+    display: none;
+    position: absolute;
+    background-color: var(--bg-main);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+.goBack{
+    padding: 10px 20px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 12px;
+    position: absolute;
+    right: 5%;
+    border: 1px solid black;
+    color: #fff;
+    font-weight: 500;
+}
+.goBack:active{
+    scale: 0.97;
+}
+
+.todo-fullpage{
+   display:none;
+   flex-direction: column;
+}
+#todo-navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.todo-container{
+    width: 100%;
+    height: 80%;
+    
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.todo-fullpage .todo-container .addTask{
+    width: 30%;
+    height: 100%;
+   background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 10px;
+}
+.todo-fullpage .todo-container .TaskList{
+    width: 70%;
+    height: 100%;
+   background-color: var(--bg-card);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+.TaskList::-webkit-scrollbar{
+    display: none;
+}
+.addTask input{
+    padding: 10px 30px;
+    font-size: 20px;
+    width: 100%;
+    color: #111111;
+    border-radius: 12px;
+    border: solid 1px white;
+    outline: none;
+}
+.addTask textarea{
+    padding: 10px 30px;
+    font-size: 20px;
+    width: 100%;
+    color: #111111;
+    border-radius: 12px;
+    border: solid 1px white;
+    height: 250px;
+        outline: none;
+
+
+}
+.addTask button{
+    padding: 10px 30px;
+    font-size: 20px;
+    width: 100%;
+    color: #fff;
+    border-radius: 12px;
+    border: solid 2px #111;
+    background-color: red;
+    font-weight: 700;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.TaskList .task{
+    width: 100%;
+    height: 110px;
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.TaskList .task h1{
+    font-size: 15px;
+    color: #111;
+}
+.TaskList .task button{
+    padding: 5px 20px;
+    font-size: 15px;
+    background-color: red;
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 12px;
+}
