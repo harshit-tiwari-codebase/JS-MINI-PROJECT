@@ -126,6 +126,39 @@ function DailyPlanner(){
     });
 
 }
-
-
  DailyPlanner();
+
+async function getQuote(){
+
+    let res = await fetch("https://motivational-spark-api.vercel.app/api/quotes/random/10");
+    let data = await res.json();
+
+    let random = data[Math.floor(Math.random() * data.length)];
+
+    let quote = random.quote;
+    let author = random.author || "Unknown";
+
+    typeQuote(quote); // typing animation
+
+    document.querySelector(".quote-author").innerText = "— " + author;
+}
+
+// typing animation
+function typeQuote(text){
+
+    let h1 = document.querySelector(".motivation-container h1");
+    h1.innerHTML="";
+
+    let i = 0;
+
+    let timer = setInterval(()=>{
+        h1.innerHTML += text.charAt(i);
+        i++;
+
+        if(i >= text.length){
+            clearInterval(timer);
+        }
+    },60);
+}
+
+getQuote();

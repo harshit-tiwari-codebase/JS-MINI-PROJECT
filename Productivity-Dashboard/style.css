@@ -356,9 +356,11 @@ form{
     position: absolute;
     top: -17%;
     left: 1%;
+    font-weight: 400;
     color: blue;
     font-size: 15px;
     color: rgb(51, 48, 48);
+    
 }
 #daily-container .plan input{
     width: 100%;
@@ -366,4 +368,98 @@ form{
     font-size: 20px;
     padding: 15px 45px;
     outline: none;
+    font-weight: 500;
 }
+#motivation-navbar{
+    width:100%;
+    height:60px;
+    display:flex;
+    padding:10px 20px;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid var(--border);
+}
+
+#motivation-navbar h2{
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+.goBack{
+    padding:6px 15px;
+    border-radius:20px;
+    background:red;
+    border:1px solid var(--border);
+    color:var(--text-main);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.goBack:hover{
+    background:rgb(144, 13, 13);
+    transform:scale(1.05);
+}
+
+/* FULL PAGE ANIMATION */
+
+.Motivation-fullpage{
+   display:none;
+   flex-direction:column;
+   animation:fadeUp .4s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* CONTAINER */
+
+.motivation-container{
+    width:100%;
+    height:100%;
+    background-color:var(--bg-card);
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    flex-direction:column;
+}
+
+/* QUOTE CARD EFFECT */
+
+.motivation-container h1{
+   font-size:36px;
+   font-weight:600;
+   text-align:center;
+   line-height:1.5;
+   max-width:700px;
+   padding:40px 30px;
+   border-radius:25px;
+   border:1px solid var(--border);
+   transition:.4s;
+   backdrop-filter: blur(8px);
+}
+
+
+/* Hover animation */
+
+.motivation-container h1:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 30px rgba(255,255,255,.05);
+}
+.quote-author{
+    margin-top:15px;
+    font-size:14px;
+    opacity:.5;
+    letter-spacing:1px;
+    text-align:center;
+}
+
