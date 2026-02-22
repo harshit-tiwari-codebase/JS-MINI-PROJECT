@@ -1,119 +1,128 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
-</head>
-
-<body>
-  <div id="main">
-    <nav>
-
-    </nav>
-    <section class="all-Elems" id="">
-      <div class="todo elem" id="0">
-        <button>Get Started</button>
-        <img src="img/todo.png" alt="">
-
-      </div>
-      <div class="daily elem" id="1">
-        <button>Get Started</button>
-        <img src="img/daily planner.png" alt="">
-      </div>
-      <div class="pomodoro elem" id="2">
-        <button>Get Started</button>
-        <img src="img/pomo.png" alt="">
-      </div>
-      <div class="daily-goals elem" id="3">
-        <button>Get Started</button>
-        <img src="img/daily goals.png" alt="">
-      </div>
-      <div class="motivation elem" id="4">
-        <button>Get Started</button>
-        <img src="img/moti.png" alt="">
-      </div>
-    </section>
-
-    <section class="full todo-fullpage">
-      <div id="todo-navbar">
-        <h2>Your Personalised Todo List</h2>
-        <button id="0" class="goBack">Close</button>
-      </div>
-      <div class="todo-container">
-        <div class="addTask">
-          <form>
-            <input type="text" placeholder="Enter the task" required>
-
-            <textarea placeholder="Description of Task" required></textarea>
-
-            <!-- Important Checkbox -->
-            <div class="important-box">
-              <input type="checkbox" id="important">
-              <label for="important">Mark as Important</label>
-            </div>
-
-            <button>Add Task</button>
-          </form>
-
+  <body>
+    <div id="main">
+      <nav></nav>
+      <section class="all-Elems" id="">
+        <div class="todo elem" id="0">
+          <button>Get Started</button>
+          <img src="img/todo.png" alt="" />
         </div>
-        <div class="TaskList">
-
-
-
-
-
-
-
-
-
-
+        <div class="daily elem" id="1">
+          <button>Get Started</button>
+          <img src="img/daily planner.png" alt="" />
         </div>
-      </div>
-    </section>
-
-    <section class="full dailyPlanner">
-      <div id="daily-nav">
-        <h2>Your Personalised Daily Planner</h2>
-        <button id="1" class="goBack">Close</button>
-      </div> 
-      <div id="daily-container">
-
-        <div class="plan">
-          <p>6:00 - 7:00</p>
-          <input type="text" placeholder="...">
+        <div class="pomodoro elem" id="2">
+          <button>Get Started</button>
+          <img src="img/pomo.png" alt="" />
         </div>
-      
-
-        <div class="plan">
-          <p>6:00 - 7:00</p>
-          <input type="text" placeholder="...">
+        <div class="daily-goals elem" id="3">
+          <button>Get Started</button>
+          <img src="img/daily goals.png" alt="" />
         </div>
-      </div>
-    </section>
+        <div class="motivation elem" id="4">
+          <button>Get Started</button>
+          <img src="img/moti.png" alt="" />
+        </div>
+      </section>
 
-    <section class="full"><div id="pomo-navbar"><h2>Pomo</h2><button id="2" class="goBack">close</button></div></section>
+      <section class="full todo-fullpage">
+        <div id="todo-navbar">
+          <h2>Your Personalised Todo List</h2>
+          <button id="0" class="goBack">Close</button>
+        </div>
+        <div class="todo-container">
+          <div class="addTask">
+            <form>
+              <input type="text" placeholder="Enter the task" required />
 
-    <section class="full">Dailt-goals <button id="3" class="goBack">close</button></section>
+              <textarea placeholder="Description of Task" required></textarea>
 
-    <section class="full Motivation-fullpage"> 
-      <div id="motivation-navbar"> <h2>Daily Dose of Inspiration</h2> <button id="4" class="goBack">close</button></div> 
-      <div class="motivation-container">
-   <h1></h1>
-   <p class="quote-author"></p>
-</div>
+              <!-- Important Checkbox -->
+              <div class="important-box">
+                <input type="checkbox" id="important" />
+                <label for="important">Mark as Important</label>
+              </div>
 
-    </section>
-  </div>
-  <script src="script.js"></script>
-</body>
+              <button>Add Task</button>
+            </form>
+          </div>
+          <div class="TaskList"></div>
+        </div>
+      </section>
 
+      <section class="full dailyPlanner">
+        <div id="daily-nav">
+          <h2>Your Personalised Daily Planner</h2>
+          <button id="1" class="goBack">Close</button>
+        </div>
+        <div id="daily-container">
+          <div class="plan">
+            <p>6:00 - 7:00</p>
+            <input type="text" placeholder="..." />
+          </div>
+
+          <div class="plan">
+            <p>6:00 - 7:00</p>
+            <input type="text" placeholder="..." />
+          </div>
+        </div>
+      </section>
+
+      <section class="full PomoDoro">
+        <div id="pomo-navbar">
+          <h2>Study with me </h2>
+          <button id="2" class="goBack">close</button>
+        </div>
+        <div class="pomo-container">
+           <div class="Timer">
+             <h1>25:00</h1>
+           <div class="pomo-btns"> <button class="start-time">Start</button>
+            <button class="Pause-time">Pause</button>
+            <button class="reset-time">Reset</button></div>
+           </div>
+        </div>
+      </section>
+
+      <section class="full">
+        <div id="todo-navbar">
+          <h2>Your Daily Goals</h2>
+          <button id="3" class="goBack">Close</button>
+        </div>
+      </section>
+
+      <section class="full Motivation-fullpage">
+        <div id="motivation-navbar">
+          <h2>Daily Dose of Inspiration</h2>
+          <button id="4" class="goBack">close</button>
+        </div>
+        <div class="motivation-container">
+          <h1></h1>
+          <p class="quote-author"></p>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
